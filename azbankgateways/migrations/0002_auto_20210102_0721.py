@@ -31,13 +31,14 @@ class Migration(migrations.Migration):
             name="status",
             field=models.CharField(
                 choices=[
-                    ("Waiting", "Waiting"),
-                    ("Redirect to bank", "Redirect To Bank"),
-                    ("Return from bank", "Return From Bank"),
-                    ("Cancel by user", "Cancel By User"),
-                    ("Expire gateway token", "Expire Gateway Token"),
-                    ("Expire verify payment", "Expire Verify Payment"),
-                    ("Complete", "Complete"),
+                    ("WAITING", "Waiting"),
+                    ("REDIRECT_TO_BANK", "Redirect To Bank"),
+                    ("RETURN_FROM_BANK", "Return From Bank"),
+                    ("CANCEL_BY_USER", "Cancel By User"),
+                    ("EXPIRE_GATEWAY_TOKEN", "Expire Gateway Token"),
+                    ("EXPIRE_VERIFY_PAYMENT", "Expire Verify Payment"),
+                    ("COMPLETE", "Complete"),
+                    ("ERROR", "Unknown error acquired")
                 ],
                 max_length=50,
                 verbose_name="Status",
